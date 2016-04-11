@@ -11,7 +11,7 @@ var exec = require('child_process').exec,
     child;
 
 // Install script dependencies first
-child = exec("npm install",
+child = exec("npm", "install",
     function (error, stdout, stderr) {
         console.log('npm install stdout: ' + stdout);
         console.log('npm install stderr: ' + stderr);
