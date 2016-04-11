@@ -1,0 +1,15 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "application install scripts",
+  "main": "ApplicationStop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Benitez",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.12.0",
+    "ps-tree": "^1.0.1"
+  }
+}

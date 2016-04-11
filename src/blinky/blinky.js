@@ -14,7 +14,7 @@ var looping = 0;
 
 // define the callback function
 function light(err, state) {
-    console.log("state: " + require("util").inspect(state === 1));
+    //console.log("state: " + require("util").inspect(state === 1));
     // check the state of the button
     // 1 == pressed, 0 == not pressed
     if(state == 1) {
@@ -27,7 +27,7 @@ function light(err, state) {
                 }, 100)},
                 function(callback){setTimeout(function () {
                     led1.writeSync(0);callback();
-                }, 200)},
+                }, 300)},
                 function(callback){setTimeout(function () {
                     led2.writeSync(1);callback();
                 }, 100)},
@@ -39,7 +39,7 @@ function light(err, state) {
                 }, 100)},
                 function(callback){setTimeout(function () {
                     led3.writeSync(0);callback();
-                }, 200)},
+                }, 300)},
                 function(callback){setTimeout(function () {
                     led4.writeSync(1);callback();
                 }, 100)},

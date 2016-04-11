@@ -2,6 +2,8 @@
   "name": "application-name",
   "version": "0.0.1",
   "dependencies": {
-    "onoff": "^1.0.4"
+    "moment": "^2.12.0",
+    "onoff": "^1.0.4",
+    "ps-tree": "^1.0.1"
   }
 }
