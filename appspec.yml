@@ -58,15 +58,15 @@ permissions:
 #   may cause associated deployments to fail.
 hooks:
   BeforeInstall:
-    - location: /apps/blinky/scripts/BeforeInstall.js
+    - location: /src/blinky/scripts/BeforeInstall.js
       timeout: 60
       runas: root
   AfterInstall:
-    - location: /apps/blinky/scripts/AfterInstall.js
+    - location: /src/blinky/scripts/AfterInstall.js
       timeout: 60
       runas: root
   ApplicationStart:
-    - location: /apps/blinky/scripts/ApplicationStart.js
+    - location: /src/blinky/scripts/ApplicationStart.js
       timeout: 30
       runas: codedeploy
 # For each deployment lifecycle event, specify multiple "location" entries
