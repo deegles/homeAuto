@@ -16,4 +16,6 @@ if [ $# -eq 0 -o $# -gt 2 ]; then
     exit 1
 fi
 
-killtree()
+if [ -f /tmp/blinkypid ]; then
+    killtree()
+fi
