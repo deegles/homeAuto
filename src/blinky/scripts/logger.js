@@ -10,7 +10,7 @@ var log_file;
 try {
     log_file = fs.createWriteStream(util.format("%s/%s.log", log_path, log_name), {flags: 'w'}); //__dirname + '/debug.log'
 } catch (e){
-    log_stdout.write("Exception creating log file write stream: " + util.inspect(e));
+    process.stderr.write("Exception creating log file write stream: " + util.inspect(e));
 }
 
 var date = new Date();
