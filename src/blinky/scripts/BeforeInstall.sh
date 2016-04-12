@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # http://stackoverflow.com/questions/392022/best-way-to-kill-all-child-processes/15139734#15139734
-killtree() {
+function killtree {
     local _pid=`cat /tmp/blinkypid`
     local _sig="SIGKILL"
     kill -stop ${_pid} # needed to stop quickly forking parent from producing children between child killing and parent killing
@@ -11,8 +11,9 @@ killtree() {
     kill -${_sig} ${_pid}
 }
 
+
 if [ -f /tmp/blinkypid ]; then
-    killtree()
+    killtree
 fi
 
 # remove previous files
