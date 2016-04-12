@@ -6,6 +6,7 @@ var exec = require('child_process').exec,
     child;
 
 console.log("Setting up script dependencies...");
+
 // Install blinky dependencies first
 child = exec('npm', 'install', {cwd: '/apps/blinky/src'},
     function (error, stdout, stderr) {
