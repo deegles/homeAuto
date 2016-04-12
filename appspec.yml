@@ -66,7 +66,7 @@ hooks:
       timeout: 60
       runas: root
   AfterInstall:
-    - location: /src/blinky/scripts/AfterInstall.js
+    - location: /apps/blinky/scripts/AfterInstall.js
       timeout: 60
       runas: root
   ApplicationStart:
