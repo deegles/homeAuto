@@ -17,8 +17,9 @@ try {
 }
 
 console.log = function(d) {
+    var date = new Date();
     if(log_file){
-        log_file.write(Date.now().toISOString() + ": " + util.format(d) + '\n');
+        log_file.write(date.toISOString() + ": " + util.format(d) + '\n');
     }
     log_stdout.write(util.format(d) + '\n');
 };
