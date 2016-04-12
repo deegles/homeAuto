@@ -57,10 +57,6 @@ permissions:
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
 hooks:
-  ApplicationStop:
-    - location: /src/blinky/scripts/ApplicationStop.sh
-      timeout: 60
-      runas: root
   BeforeInstall:
     - location: /src/blinky/scripts/BeforeInstall.sh
       timeout: 60
