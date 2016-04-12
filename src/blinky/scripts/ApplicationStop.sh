@@ -17,6 +17,3 @@ if [ $# -eq 0 -o $# -gt 2 ]; then
 fi
 
 killtree()
-
-# remove previous files
-rm -rf /apps/blinky
