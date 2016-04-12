@@ -16,11 +16,9 @@ try {
     process.stderr.write("Exception creating log file write stream: " + util.inspect(e));
 }
 
-var date = new Date();
-
 console.log = function(d) {
     if(log_file){
-        log_file.write(date.now().toISOString() + ": " + util.format(d) + '\n');
+        log_file.write(Date.now().toISOString() + ": " + util.format(d) + '\n');
     }
     log_stdout.write(util.format(d) + '\n');
 };
