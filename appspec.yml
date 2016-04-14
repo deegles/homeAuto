@@ -46,6 +46,7 @@ permissions:
     type:
       - file
   - object: /apps/logs/blinky
+    pattern: "**"
     owner: codedeploy
     group: cdgroup
     mode: 655
