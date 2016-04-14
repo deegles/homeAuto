@@ -8,7 +8,7 @@ var pidPath = config.pidPath;
 
 var spawn = require('child_process').spawn;
 
-var blinky = spawn("node", "/apps/blinky/src/blinky.js");
+var blinky = spawn("node", "blinky.js", {cwd: "/apps/blinky/src/"});
 
 blinky.stdout.on('data', function(data) {
     console.log(data);
