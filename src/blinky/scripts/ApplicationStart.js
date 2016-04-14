@@ -8,7 +8,7 @@ var pidPath = config.pidPath;
 
 var spawn = require('child_process').spawn;
 
-var blinky = spawn("node", "blinky.js", {cwd: "/apps/blinky/src/"});
+var blinky = spawn("node", ["blinky.js"], {cwd: "/apps/blinky/src/"});
 
 blinky.stdout.on('data', function(data) {
     console.log(data);
@@ -23,8 +23,8 @@ console.log("Saving...");
 fs.writeFile(pidPath, blinky.pid, function(err) {
     if(err) {
         console.log("Error saving PID to " + pidPath + ": " + err);
-        exit(1);
+        process.exit(1);
     }
     console.log("Done.");
-    exit(0);
+    process.exit(0);
 });
